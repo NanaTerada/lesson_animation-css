@@ -12,9 +12,11 @@
                 cursor: pointer;
                 opacity: 1;
                 /* transition-property: transform , opacity; */
-                transition: all .4s;
-                
-                
+                transition: 2s;
+            }
+
+            .box.moved {
+                transform: translate(400px,0);
             }
 
             .box:hover {
@@ -28,6 +30,25 @@
         </style>
     </head>
     <body>
-        <div class="box"></div>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+
+    <script>
+        (() =>{
+            'use strict';
+
+            document.querySelector('body').addEventListener( 'click',() =>{
+                document.querySelectorAll('.box').forEach((box) =>{
+                    box.classList.add('moved');
+                });
+            });
+
+        })();
+        
+
+    
+    </script>
+
     </body>
 </html>
