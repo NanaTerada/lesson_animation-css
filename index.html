@@ -13,10 +13,21 @@
                 opacity: 1;
                 /* transition-property: transform , opacity; */
                 transition: 2s;
+                transition-timing-function: ease;
             }
 
             .box.moved {
                 transform: translate(400px,0);
+            }
+
+            .box2 {
+                transition-timing-function: ease-out;
+            }
+
+            .box3 {
+                transition-timing-function:ease-in-out;
+                height: 180px;
+                background: #333;
             }
 
             .box:hover {
